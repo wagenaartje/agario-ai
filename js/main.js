@@ -8,7 +8,7 @@ var Architect = neataptic.Architect;
 Config.warnings = false;
 
 /** Settings */
-var WIDTH            = 1600;
+var WIDTH            = $('#field').width();
 var HEIGHT           = 800;
 
 var MAX_AREA         = 10000;
@@ -31,6 +31,8 @@ var FOOD_AMOUNT      = Math.round(WIDTH * HEIGHT * 4e-4);
 var PLAYER_AMOUNT     = Math.round(WIDTH * HEIGHT * 8e-5);
 var ITERATIONS        = 1000;
 var START_HIDDEN_SIZE = 0;
+var MUTATION_RATE     = 0.3;
+var ELITISM_PERCENT   = 0.1;
 
 // Trained population
 var USE_TRAINED_POP = true;
@@ -61,8 +63,8 @@ function initNeat(){
         Methods.Mutation.SUB_BACK_CONN
       ],
       popsize: PLAYER_AMOUNT,
-      mutationRate: 0.3,
-      elitism: Math.round(0.1 * PLAYER_AMOUNT),
+      mutationRate: MUTATION_RATE,
+      elitism: Math.round(ELITISM_PERCENT * PLAYER_AMOUNT),
       network: new Architect.Random(
         1 + PLAYER_DETECTION * 3 + FOOD_DETECTION * 2,
         START_HIDDEN_SIZE,
