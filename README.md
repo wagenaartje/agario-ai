@@ -1,5 +1,5 @@
 # Agar.io-AI
-This repository shows how you can use [Neataptic](https://github.com/wagenaartje/neataptic) to succesfully teach neural networks to play Agar.io. You can see the genomes live in action [here](https://wagenaartje.github.io/agario-ai/). These genomes have been trained for over 1000 generations, and definetely show sume human-like traits. 
+This repository shows how you can use [Neataptic](https://github.com/wagenaartje/neataptic) to succesfully teach neural networks to play Agar.io. You can see the genomes live in action [here](https://wagenaartje.github.io/agario-ai/). These genomes have been trained for over 1000 generations, and definetely show sume human-like traits. Visualisation done with [P5.js](https://p5js.org/).
 
 [Read an article on this repo here](https://wagenaartje.github.io/neataptic/articles/agario/). 
 
