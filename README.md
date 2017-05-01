@@ -17,7 +17,7 @@ If you manage to optimize the settings, please perform either a pull request or 
 * `FOOD_DETECTION` set the maximal amount of food blobs a genome can detect
 * `PLAYER_DETECTION` set the maximal amount of other genomes a genome can detect
 * `MIN_SPEED` set the minimal multiplier speed a genome can have (bigger genomes move slower)
-* `MAX_SPEED` set the maximal multiplier speed a genome can hive (smaller genomes move faster)
+* `MAX_SPEED` set the maximal multiplier speed a genome can have (smaller genomes move faster)
 * `FOOD_AREA` set the area of food blobs
 * `FOOD_AMOUNT` set the amount of food blobs on the field
 * `PLAYER_AMOUNT` set the amount of genomes that play on the field (population size)
