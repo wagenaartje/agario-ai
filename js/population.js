@@ -1,4 +1,4 @@
-const population = [
+let population = [
   {
     "nodes":[
       {
