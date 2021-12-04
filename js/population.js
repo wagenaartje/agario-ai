@@ -1,4 +1,4 @@
-var population = [
+const population = [
   {
     "nodes":[
       {
@@ -29153,8 +29153,8 @@ var population = [
 
 // Convert the json to an array of networks
 var newPop = [];
-for(var i = 0; i < PLAYER_AMOUNT; i++){
-  var json = population[i % population.length];
+for(let i = 0; i < PLAYER_AMOUNT; i++){
+  const json = population[i % population.length];
   newPop[i] = neataptic.Network.fromJSON(json);
 }
 population = newPop;
