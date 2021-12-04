@@ -8,24 +8,26 @@ var Architect = neataptic.Architect;
 Config.warnings = false;
 
 /** Settings */
-var WIDTH            = $('#field').width();
-var HEIGHT           = 800;
+var WIDTH             = $('#field').width();
+var HEIGHT            = 800;
 
-var MAX_AREA         = 10000;
-var MIN_AREA         = 400;
+var MAX_AREA          = 10000;
+var MIN_AREA          = 400;
 
-var RELATIVE_SIZE    = 1.1;
-var DECREASE_SIZE    = 0.998;
+var RELATIVE_SIZE     = 1.1;
+var DECREASE_SIZE     = 0.998;
 
-var DETECTION_RADIUS = 150;
-var FOOD_DETECTION   = 3;
-var PLAYER_DETECTION = 3;
+var DETECTION_RADIUS  = 150;
+var FOOD_DETECTION    = 3;
+var PLAYER_DETECTION  = 3;
 
-var MIN_SPEED        = 0.6;
-var SPEED            = 3;
+var MIN_SPEED         = 0.6;
+var SPEED             = 3;
 
-var FOOD_AREA        = 80;
-var FOOD_AMOUNT      = Math.round(WIDTH * HEIGHT * 4e-4);
+var FOOD_AREA         = 80;
+var FOOD_AMOUNT       = Math.round(WIDTH * HEIGHT * 4e-4);
+
+var WALL_COLLISION    = false;
 
 // GA settings
 var PLAYER_AMOUNT     = Math.round(WIDTH * HEIGHT * 8e-5);
@@ -83,8 +85,7 @@ function startEvaluation(){
   players = [];
   highestScore = 0;
 
-  for(var genome in neat.population){
-    genome = neat.population[genome];
+  for(const genome of neat.population){
     new Player(genome);
   }
 }
@@ -94,15 +95,15 @@ function endEvaluation(){
   console.log('Generation:', neat.generation, '- average score:', neat.getAverage());
 
   neat.sort();
-  var newPopulation = [];
+  const newPopulation = [];
 
   // Elitism
-  for(var i = 0; i < neat.elitism; i++){
+  for(let i = 0; i < neat.elitism; i++){
     newPopulation.push(neat.population[i]);
   }
 
   // Breed the next individuals
-  for(var i = 0; i < neat.popsize - neat.elitism; i++){
+  for(let i = 0; i < neat.popsize - neat.elitism; i++){
     newPopulation.push(neat.getOffspring());
   }
 
