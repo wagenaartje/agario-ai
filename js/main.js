@@ -18,8 +18,8 @@ var RELATIVE_SIZE     = 1.1;
 var DECREASE_SIZE     = 0.998;
 
 var DETECTION_RADIUS  = 150;
-var FOOD_DETECTION    = 100;
-var PLAYER_DETECTION  = 30;
+var FOOD_DETECTION    = 3;
+var PLAYER_DETECTION  = 3;
 
 var MIN_SPEED         = 0.6;
 var SPEED             = 3;
@@ -37,7 +37,7 @@ var MUTATION_RATE     = 0.3;
 var ELITISM_PERCENT   = 0.1;
 
 // Trained population
-var USE_TRAINED_POP = false;
+var USE_TRAINED_POP = true;
 
 // Global vars
 var neat;
